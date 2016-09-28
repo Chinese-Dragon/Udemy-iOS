@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1nF-S6-5Vk">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Blog Name-->
+        <scene sceneID="3I6-Sq-GXX">
+            <objects>
+                <viewController id="tcv-t5-Nl1" customClass="PostPageViewController" customModule="Blog_Reader" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gTq-ll-MDd"/>
+                        <viewControllerLayoutGuide type="bottom" id="BI0-fB-tKC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y7O-N2-OPk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HiF-1V-r8u">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HiF-1V-r8u" firstAttribute="leading" secondItem="Y7O-N2-OPk" secondAttribute="leading" id="DC9-tu-EPR"/>
+                            <constraint firstItem="HiF-1V-r8u" firstAttribute="top" secondItem="gTq-ll-MDd" secondAttribute="bottom" id="Y0v-IB-TUh"/>
+                            <constraint firstItem="HiF-1V-r8u" firstAttribute="bottom" secondItem="BI0-fB-tKC" secondAttribute="top" id="a2R-Cn-liR"/>
+                            <constraint firstAttribute="trailing" secondItem="HiF-1V-r8u" secondAttribute="trailing" id="yGi-3d-gO9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Blog Name" id="WEU-I6-TIP"/>
+                    <connections>
+                        <outlet property="webView" destination="HiF-1V-r8u" id="2oV-WB-ZQ2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="17B-LQ-YWH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1321" y="376"/>
+        </scene>
+        <!--Blog Posts-->
+        <scene sceneID="yoM-zN-UDQ">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="MAN-Nb-NfR" customClass="BlogPostsTableViewController" customModule="Blog_Reader" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nWP-QG-yJ1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Blog Post" id="BkN-gZ-abq">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BkN-gZ-abq" id="cro-to-gJF">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="tF7-uK-7me" kind="show" identifier="Show Blog" id="FdK-i9-fKq"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="MAN-Nb-NfR" id="tTh-al-Kta"/>
+                            <outlet property="delegate" destination="MAN-Nb-NfR" id="vhW-Fn-MnU"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Blog Posts" id="Fpa-07-kcX"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPl-cf-f5l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1321" y="-345"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5b5-IM-x58">
+            <objects>
+                <navigationController id="arl-eZ-zuk" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HTM-kc-Q5A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MAN-Nb-NfR" kind="relationship" relationship="rootViewController" id="iHM-Ri-bZO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yRu-Vs-ndc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="501" y="-345"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="tmx-bG-4gC">
+            <objects>
+                <splitViewController id="1nF-S6-5Vk" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="arl-eZ-zuk" kind="relationship" relationship="masterViewController" id="VDf-Jg-e8h"/>
+                        <segue destination="tF7-uK-7me" kind="relationship" relationship="detailViewController" id="Kba-rU-Vnk"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sqw-da-gz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-319" y="-14"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4hi-Xd-NXe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tF7-uK-7me" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QpO-w9-UKp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tcv-t5-Nl1" kind="relationship" relationship="rootViewController" id="Vnm-UU-KBI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mGd-jW-9hD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="511" y="363"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="FdK-i9-fKq"/>
+    </inferredMetricsTieBreakers>
+</document>

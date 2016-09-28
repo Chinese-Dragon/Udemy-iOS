@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Music_Intro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Star Universe 09 iPhone 6 Wallpaper.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="a5g-cB-kbF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxb-XK-dzL">
+                                <rect key="frame" x="166" y="590" width="42" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="rKZ-MS-Xa5"/>
+                                    <constraint firstAttribute="width" constant="42" id="yuB-6J-LBH"/>
+                                </constraints>
+                                <state key="normal" image="Play Filled-24.png"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ywf-wf-EFa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lx0-9A-yYY">
+                                <rect key="frame" x="313" y="590" width="42" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="Neu-S9-bGt"/>
+                                    <constraint firstAttribute="height" constant="34" id="l4v-06-NTq"/>
+                                </constraints>
+                                <state key="normal" image="Pause Filled-24.png"/>
+                                <connections>
+                                    <action selector="pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x00-XF-Pr6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iD2-3g-Skx">
+                                <rect key="frame" x="20" y="590" width="42" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="8Y3-cv-GBm"/>
+                                    <constraint firstAttribute="height" constant="34" id="QAA-70-dnE"/>
+                                </constraints>
+                                <state key="normal" image="Delete Filled-24.png"/>
+                                <connections>
+                                    <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W0s-dd-MWD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Fade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMt-f1-Ddr">
+                                <rect key="frame" x="20" y="20" width="335" height="72"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="35"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Faded-by-Alan-Walker.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="OQm-Hv-frv">
+                                <rect key="frame" x="45" y="177" width="284" height="314"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="314" id="QLd-ry-grF"/>
+                                    <constraint firstAttribute="width" constant="284" id="ro2-cV-731"/>
+                                </constraints>
+                            </imageView>
+                            <slider contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1RS-N6-kYn">
+                                <rect key="frame" x="48" y="120" width="278" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="274" id="aPV-7e-gBc"/>
+                                    <constraint firstAttribute="height" constant="30" id="mpE-Vd-d1i"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="0.43989482260000001" green="0.85470750299999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="thumbTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="adjustProgress:" destination="BYZ-38-t0r" eventType="valueChanged" id="C4O-5b-DLj"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="Mute-18.png" maximumValueImage="High Volume-18.png" translatesAutoresizingMaskIntoConstraints="NO" id="jLL-LA-28u">
+                                <rect key="frame" x="76" y="519" width="222" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="218" id="Jc0-FK-ciF"/>
+                                    <constraint firstAttribute="height" constant="30" id="NMo-1y-TnG"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="0.43989482260000001" green="0.85470750299999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="thumbTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="adjustVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="mno-Pc-DWa"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="a5g-cB-kbF" secondAttribute="trailing" constant="-20" id="2bg-Hd-cOR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zxb-XK-dzL" secondAttribute="bottom" constant="43" id="2co-FO-daU"/>
+                            <constraint firstItem="TMt-f1-Ddr" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="60b-yE-78Q"/>
+                            <constraint firstItem="a5g-cB-kbF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="63r-vO-d2e"/>
+                            <constraint firstItem="TMt-f1-Ddr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9dn-5H-EUD"/>
+                            <constraint firstItem="1RS-N6-kYn" firstAttribute="top" secondItem="TMt-f1-Ddr" secondAttribute="bottom" constant="28" id="A33-oL-KgB"/>
+                            <constraint firstItem="TMt-f1-Ddr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="B2L-5e-r5L"/>
+                            <constraint firstItem="OQm-Hv-frv" firstAttribute="top" secondItem="1RS-N6-kYn" secondAttribute="bottom" constant="27" id="G87-Gv-mNk"/>
+                            <constraint firstItem="TMt-f1-Ddr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IIA-Mn-Av8"/>
+                            <constraint firstItem="jLL-LA-28u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jp6-ti-S3h"/>
+                            <constraint firstItem="zxb-XK-dzL" firstAttribute="top" secondItem="jLL-LA-28u" secondAttribute="bottom" constant="41" id="NZW-JM-cc4"/>
+                            <constraint firstItem="zxb-XK-dzL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PiD-0r-pSN"/>
+                            <constraint firstItem="a5g-cB-kbF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="UsH-1j-UTb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iD2-3g-Skx" secondAttribute="bottom" constant="43" id="V1t-wW-yq7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="a5g-cB-kbF" secondAttribute="bottom" id="WUN-O4-7rr"/>
+                            <constraint firstItem="iD2-3g-Skx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aMy-j4-kSi"/>
+                            <constraint firstItem="TMt-f1-Ddr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="c3h-G9-GQI"/>
+                            <constraint firstItem="jLL-LA-28u" firstAttribute="top" secondItem="OQm-Hv-frv" secondAttribute="bottom" constant="28" id="cAm-bR-hzQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lx0-9A-yYY" secondAttribute="bottom" constant="43" id="gwh-s0-3Fb"/>
+                            <constraint firstItem="OQm-Hv-frv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lOh-RS-t1p"/>
+                            <constraint firstItem="lx0-9A-yYY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="meU-Gy-jnJ"/>
+                            <constraint firstItem="OQm-Hv-frv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="veR-2Z-eEC"/>
+                            <constraint firstItem="1RS-N6-kYn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xku-y7-luc"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="progress" destination="1RS-N6-kYn" id="xDX-55-3Pk"/>
+                        <outlet property="volume" destination="jLL-LA-28u" id="a4f-F7-7Ss"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="298.5" y="265.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Delete Filled-24.png" width="24" height="24"/>
+        <image name="Faded-by-Alan-Walker.jpg" width="1200" height="1200"/>
+        <image name="High Volume-18.png" width="18" height="18"/>
+        <image name="Mute-18.png" width="18" height="18"/>
+        <image name="Pause Filled-24.png" width="24" height="24"/>
+        <image name="Play Filled-24.png" width="24" height="24"/>
+        <image name="Star Universe 09 iPhone 6 Wallpaper.jpg" width="750" height="1334"/>
+    </resources>
+</document>
